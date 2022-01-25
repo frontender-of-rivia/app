@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Название сайта</title>
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css">
+	<!-- Slick slider css -->
+	<link rel="stylesheet" type="text/css" href="libs/slick-slider/slick.css">
+	<!-- Google Fonts roboto / rubik -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900|Rubik:500,700,900&subset=latin,cyrillic" rel="stylesheet">
+	<!-- Базовые стили CSS -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!-- jQuery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Slick slider JS -->
+	<script type="text/javascript" src="libs/slick-slider/slick.min.js"></script>
+	<!-- autoScroll -->
+	<script src='js/autosize.js'></script>
+	<!-- Magnific Popup JS -->
+	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+</head>
+<body class="typography-page">
+	<style>
+		.typography-page{
+			min-height: 100vh;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			padding: 40px;
+		}
+	</style>
+
+
+
+
+
+	<!-- Инпут -->
+	<div class="field">
+		<input type="text" class="field__input">
+	</div>
+
+
+
+
+	<!-- Кнопки -->
+	<div class="btn">
+		<button class="btn__item">Кнопка button</button>
+	</div>
+	<div class="btn">
+		<a class="btn__item">Кнопка a</a>
+	</div>
+
+
+
+
+
+	<!-- Заголовок -->
+	<div class="title">
+		<h1 class="title__inner">Заголовок h2</h1>
+	</div>
+	
+
+
+
+	<!-- Основной текст -->
+	<div class="text">
+		<p class="text__par">
+			Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Своих по всей единственное которое переулка послушавшись имеет. Заманивший он, составитель? Приставка жаренные залетают за, страну переулка толку, рот рукопись маленький?
+		</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="form">
+
+		<form class="form__body">
+
+
+			<div class="form__field field">
+				<input type="text" class="form__input field__input">
+			</div>
+
+
+			<div class="field">
+				<input type="text" class="field__input">
+			</div>
+
+
+		</form>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="checkbox-wrapper">
+		<input type="checkbox" id="checkbox1" required value="">
+		<label for="checkbox1"><span>Я принимаю условия обработки персональных данных</span></label>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<section class="example-section">
+		<div class="container">
+			<div class="example-slider my_slick-slider">
+				<div class="example-wrapper">
+					<div class="example-item">
+						1
+					</div>
+				</div>
+				<div class="example-wrapper">
+					<div class="example-item">
+						2
+					</div>
+				</div>
+				<div class="example-wrapper">
+					<div class="example-item">
+						3
+					</div>
+				</div>
+				<div class="example-wrapper">
+					<div class="example-item">
+						4
+					</div>
+				</div>
+			</div>
+			<div class="example-arrows my_slick-arrows"></div>
+			<div class="example-dots my_slick-dots"></div>
+		</div>
+	</section>
+			
+	
+	<style>
+		.example-slider{
+			padding: 0 40px;
+		}
+		.example-wrapper{
+			padding: 0 30px;
+		}
+	</style>
+			
+			
+	<script>
+		jQuery('.example-slider').slick({
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			dots: true,
+			appendDots: jQuery('.example-dots'),
+			appendArrows: jQuery('.example-arrows'),
+			prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"> < </button>',
+			nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"> > </button>',
+			responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		        infinite: true,
+		        dots: true
+		      }
+		    },
+		    {
+		      breakpoint: 600,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Базовые скрипты javascript -->
+	<script src="js/main.js"></script>
+</body>
+</html>
