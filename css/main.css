@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/* reset */
+body, html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  display: inline-block; }
+
+button {
+  border: none; }
+
+ul li:last-child {
+  margin-right: 0;
+  margin-bottom: 0; }
+
+ul li:first-child {
+  margin-left: 0;
+  margin-top: 0; }
+
+.text p:last-child {
+  margin-bottom: 0; }
+
+.btn a, .btn2 a, .btn2--mod2 a, .btn button, .btn2 button, .btn2--mod2 button {
+  cursor: pointer;
+  display: inline-block; }
+
+/* Мои классы */
+.body-stop {
+  overflow: hidden !important; }
+
+.hidden {
+  display: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/* для маленьких мониторов и больших планшетов и обычных планшетов в горизонтальной ротации */
+/* т.е мониторы и плашеты (1024-1260) */
+@media screen and (max-width: 1260px) {
+  .container {
+    width: 950px; } }
+
+/* для обычных планшетов в вертикальной ротации */
+/* т.е плашеты (650-991) */
+@media screen and (max-width: 991px) {
+  .container {
+    width: 620px; } }
+
+/* для телефонов */
+/* т.е телефоны (320-650) */
+@media screen and (max-width: 650px) {
+  .container {
+    width: 290px; } }
+
+/* --- UI KIT --- */
+/* buttons */
+.btn, .btn2, .btn2--mod2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn2:hover, .btn2--mod2:hover {
+  background: red; }
+
+/* inputs */
+.input, .input2 {
+  display: inline-block;
+  width: 100%;
+  height: 100%; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #000; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #000; }
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #000; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #000; }
+
+/* checkboxes */
+.checkbox, .checkbox2 {
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+.checkbox:active .checkbox__input, .checkbox2:active .checkbox__input, .checkbox:active .checkbox2__input, .checkbox2:active .checkbox2__input {
+  transform: scale(1.05); }
+
+.checkbox__input, .checkbox2__input {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  cursor: pointer;
+  appearance: none; }
+
+.checkbox__input:hover, .checkbox2__input:hover {
+  border: 1px solid gray; }
+
+.checkbox__input:checked, .checkbox2__input:checked {
+  background: url(../img/checkbox-checkmark.png) no-repeat center center; }
+
+.checkbox__input:disabled, .checkbox2__input:disabled {
+  filter: grayscale(80%); }
+
+/* radios */
+.radio {
+  display: flex;
+  align-items: center; }
+
+.radio__input {
+  display: none; }
+
+.radio__box {
+  font-size: 0;
+  width: 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  border-radius: 50px;
+  border: 1px solid #DBDBDB;
+  margin-right: 10px;
+  font-size: 0; }
+
+.radio__input:checked + .radio__box {
+  font-size: 20px; }
+
+.radio__label {
+  display: flex;
+  align-items: center; }
+
+/* tumblers */
+.tumbler {
+  display: flex;
+  align-items: center; }
+
+.tumbler__switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 36px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 50px;
+  vertical-align: top;
+  transition: .2s;
+  background: #DBDBDB;
+  cursor: pointer; }
+  .tumbler__switch:focus {
+    outline: 1px solid red; }
+
+.tumbler__switch:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background: white;
+  transition: .15s; }
+
+.tumbler__input {
+  display: block;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  z-index: -1; }
+  .tumbler__input:checked + .tumbler__switch {
+    background: #75A55F; }
+  .tumbler__input:checked + .tumbler__switch:before {
+    transform: translateX(14px); }
+
+/* selects */
+.select__head {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer; }
+
+.select__ungle--active {
+  transform: rotate(180deg); }
+
+.select__box {
+  display: none;
+  opacity: 0;
+  transition: 0.2s ease; }
+
+.select__box--active {
+  display: block;
+  opacity: 1; }
+
+.select__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 5px 20px;
+  border: 1px solid #ccc; }
+
+.select__ungle {
+  margin-left: auto; }
+
+.select__item--curent {
+  color: red; }
+
+/* inputfiles */
+.upload-has__delete {
+  display: none; }
+
+.upload-has__delete--open {
+  display: block; }
+
+/* 1. title */
+.title {
+  text-align: left; }
+
+.title__in {
+  color: #000; }
+
+/* 2. text */
+.text {
+  text-align: left; }
+
+.text__in {
+  color: #000; }
+
+.text--mod2 .text__in {
+  color: green; }
+
+/* 3. something */
