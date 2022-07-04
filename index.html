@@ -20,12 +20,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
-<style>
-    * {
-        color: #fff;
-        font-family: 'Roboto';
-    }
-</style>
 
 <body>
 
@@ -34,25 +28,32 @@
             <div class="hello__left">
                 <div class="customer__demo">
                     <div class="customer__demo-title">
-                        Посмотреть насколько готов сайт:
+                        Состояние разработки сайта:
                     </div>
-                    <!--
                     <div class="customer__pages">
                         <div class="customer__pages-title">
                             Страницы сайта:
                         </div>
-                        <ul class="customer__pages-box">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Дела</a></li>
-                        </ul>
-                    </div>-->
-                    <div class="customer__pages">
-                        <a href="#" class="customer__pages-link">
-                            Ссылка
+                        <a href="site/index.html" target="_blank" class="customer__pages-link">
+                            Главная
                         </a>
+                        <!--
+                        <a href="#" class="customer__pages-link">
+                            О нас
+                        </a>-->
                     </div>
+                    <!--
+                    <div class="customer__pages">
+                        <div class="customer__pages-title">
+                            Попап окна на сайте:
+                        </div>
+                        <a href="#" class="customer__pages-link">
+                            Попап #1
+                        </a>
+                        <a href="#" class="customer__pages-link">
+                            Попап #2
+                        </a>
+                    </div>-->
                 </div>
             </div>
             <div class="hello-right">
@@ -61,7 +62,7 @@
                         Исполнитель
                     </div>
                     <div class="exec__img">
-                        <img src="img/img.png">
+                        <img src="ava.png">
                     </div>
                     <div class="exec__name">
                         Юрий Романов
@@ -70,7 +71,7 @@
                 <div class="customer">
                     <div class="customer__name">
                         <p>Вы:</p>
-                        <span>Дмитрий Никитин</span>
+                        <span>Имя заказчика</span>
                     </div>
                     <div class="customer__order">
                         <p>Заказ на FL.RU</p>
@@ -78,7 +79,7 @@
                     </div>
                     <div class="customer__site">
                         <p>Ваш сайт:</p>
-                        <span>New Lex</span>
+                        <span>Название сайта</span>
                     </div>
                 </div>
             </div>
@@ -86,7 +87,222 @@
     </section>
 
 
+    <style>
+        body,
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto';
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hello-page {
+            background: #1D203E;
+            height: 100vh;
+        }
+
+        .hello-container {
+            display: grid;
+            grid-template-columns: 5fr 1fr;
+            min-height: 100vh;
+        }
+
+        .exec {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #2C2F48;
+            height: 100vh;
+            padding: 25px;
+            height: 40%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .customer {
+            height: 60%;
+            padding: 25px;
+            background: #2C2F48;
+        }
+
+        .hello-right {
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .customer__order {
+            margin-bottom: 20px;
+        }
+
+        .customer__order p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .customer__order span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .customer__name {
+            margin-bottom: 20px;
+        }
+
+        .customer__name p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .customer__name span {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .customer__site {
+            margin-bottom: 60px;
+        }
+
+        .customer__site p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .customer__site span {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .customer__pages-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .customer__pages-box li {
+            margin-bottom: 10px;
+        }
+
+        .customer__pages-box a {
+            color: pink;
+            text-decoration: underline;
+        }
+
+        .customer__pages {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .exec__name {
+            font-weight: 700;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .exec__title {
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .exec__img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(to bottom right, #A73EE7, #00EBFF);
+        }
+
+        .exec__img img {
+            border-radius: 100px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .exec__name {
+            text-align: center;
+            margin: 20px 0 10px;
+            font-size: 24px;
+        }
+
+        .customer__demo-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hello__left {
+            padding: 80px;
+        }
+
+        .customer__pages-link {
+            color: #33CCFF;
+            transition: 0.2s ease;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .customer__pages-link:hover {
+            color: #3399FF;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .hello__left {
+                padding: 40px;
+            }
+
+            .customer__demo-title {
+                font-size: 34px;
+            }
+
+            .exec {
+                height: 50%;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .hello-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 570px) {
+            .customer__demo-title {
+                font-size: 18px;
+            }
+
+            .customer__order span {
+                font-size: 16px;
+            }
+
+            .customer__name span {
+                font-size: 16px;
+            }
+
+            .customer__site span {
+                font-size: 20px;
+            }
+        }
+    </style>
 
 
 
